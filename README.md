@@ -33,8 +33,8 @@ Arduino Uno R4 Wifi (in my case) or any other Arduino board with Wifi feature of
 
 Rgb led two pins are connected to the pins 6 and 7.
 Push button is connected to pin 3 (workings as an interrupt).
-DHT22 sensor is connected to pin 2, 3,3V and GND.
-Oled display ST7735S connection
+DHT22 sensor is connected to pin 2, 3,3V and GND. <br /><br />
+#### Oled display ST7735S connection
 - Pin RST -> pin 8.
 - Pin DC -> pin 9.
 - Pin RST -> pin 8.
