@@ -3,7 +3,18 @@
 The goal with this project was to display temperature and humitidy data to a oled display and transfer same data over mtqq protocol
 to an another device. It was accomplished with help of Arduino Uno R4 Wifi board and DHT22 sensor. It also done possible to turn off mtqq protocol transsmission
 with help of button. A rgb led lights up green coloe when mtqq protocol transsmission is turned on, otherwise it the color is red. In my case I uses the ST7735S model as my 
-oled display. You can find more info about Arduino IDE from this link. https://www.arduino.cc/en/software.
+oled display. The code is written in C++ programming language with the help of Arduino IDE complitator. You can find more info about Arduino IDE from this link. https://www.arduino.cc/en/software.
+
+Included Arduino libraries for this project.
+
+```
+#include <WiFiS3.h>           # Library for the wifi connection.
+#include <DHT.h>              # Library for the DHT22 Sensor.
+#include <DHT_U.h>            # Library for the DHT22 Sensor.
+#include <PubSubClient.h>     # Library for the mtqq protocol.
+#include <Adafruit_ST7735.h>  # Library for the oled display.
+#include <Adafruit_GFX.h>     # Library for the oled display.
+```
 
 ### MQTT (Message Queuing Telemetry Transport)
 It is a lightweight, publish-subscribe network protocol designed for machine-to-machine (M2M) communication and the Internet of Things (IoT). It is ideal for low-bandwidth, high-latency, 
@@ -59,3 +70,27 @@ sudo systemctl enable mosquitto
 ### Example of a mtqq output with Mosquitto
 
 https://github.com/user-attachments/assets/43e05c0d-fe26-4879-b46f-6a964fa270de
+
+Here is sample C# code that also output mtqq messages from the Arduino device to a console window with help of the M2Mqtt plugin.
+```
+using System.Text;
+using uPLibrary.Networking.M2Mqtt;
+using uPLibrary.Networking.M2Mqtt.Messages; 
+MqttClient client = new MqttClient("192.168.0.239"); # Broker ip adress.
+client.MqttMsgPublishReceived += new MqttClient.MqttMsgPublishEventHandler(client_MqttMsgPublishReceived);
+
+string clientId = Guid.NewGuid().ToString();
+client.Connect(clientId);
+client.Subscribe(new string[] { "Sensordata" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+
+static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+{
+    Console.WriteLine( Encoding.UTF8.GetString(e.Message));
+}
+```
+
+
+
+
+
+
