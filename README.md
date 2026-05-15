@@ -52,7 +52,7 @@ Then start using Mosquitto ny typing.
 ```console
 sudo systemctl start mosquitto
 ```
-Optionally if you wan't that the Mosquitto service starts automatically then type.
+Optionally if you wan't that the Mosquitto service starts automatically when device boots, then type.
 ```console
 sudo systemctl enable mosquitto
 ```
