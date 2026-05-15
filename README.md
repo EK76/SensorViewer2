@@ -23,7 +23,7 @@ More info about **[MQTT](https://en.wikipedia.org/wiki/MQTT)**-
 
 ### This project consist of
 
-Arduino Uno R4 Wifi (in my case) or any other Arduino board with Wifi feature of your choosing.
+- Arduino Uno R4 Wifi (in my case) or any other Arduino board with Wifi feature of your choosing.
 - 1 psc ST7735S oled display 
 - 1 psc DHT22 sensor
 - 1 pcs push button
