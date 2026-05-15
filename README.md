@@ -33,7 +33,7 @@ Arduino Uno R4 Wifi (in my case) or any other Arduino board with Wifi feature of
 
 Rgb led two pins are connected to the pins 6 and 7.
 Push button is connected to pin 3 (workings as an interrupt).
-DHT22 sensor is connected to pin 2, 3,3V and GND. <br /><br />
+DHT22 sensor is connected to pin 2, 3,3V and GND. <br />
 #### Oled display ST7735S connection
 - Pin RST -> pin 8.
 - Pin DC -> pin 9.
@@ -48,8 +48,8 @@ First install mosquitto-clients and optionally mosquitto if you want use the Ubu
 sudo apt install mosquitto-clients
 sudo apt install mosquitto
 ```
-```console
 Then start using Mosquitto ny typing.
+```console
 sudo systemctl start mosquitto
 ```
 Optionally if you wan't that the Mosquitto service starts automatically then type.
