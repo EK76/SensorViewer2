@@ -58,7 +58,4 @@ sudo systemctl enable mosquitto
 ```
 ### Example of a mtqq output with Mosquitto
 
-https://github.com/user-attachments/assets/9af48e37-8378-4c6a-8b0f-c8157ed3b340
-
-
-
+https://github.com/user-attachments/assets/e98eaead-1055-4523-8b25-2d56e67e8bce
