@@ -3,7 +3,7 @@
 The goal with this project was to display temperature and humitidy data to a oled display and transfer same data over mtqq protocol
 to an another device. It was accomplished with help of Arduino Uno R4 Wifi board and DHT22 sensor. It also done possible to turn off mtqq protocol transsmission
 with help of button. A rgb led lights up green coloe when mtqq protocol transsmission is turned on, otherwise it the color is red. In my case I uses the ST7735S model as my 
-oled display
+oled display. You can find more info about Arduino IDE from this link. https://www.arduino.cc/en/software.
 
 ### MQTT (Message Queuing Telemetry Transport)
 It is a lightweight, publish-subscribe network protocol designed for machine-to-machine (M2M) communication and the Internet of Things (IoT). It is ideal for low-bandwidth, high-latency, 
@@ -20,11 +20,24 @@ Arduino Uno R4 Wifi (in my case) or any other Arduino board with Wifi feature of
 2 pcs 330 Ohm resistors that are connected to rgb led.
 Jump wires
 
-<img width="348" height="295" alt="image" src="https://github.com/user-attachments/assets/ba184e96-0d59-44c3-baac-f302b08864b7" />
+<img width="348" height="295" alt="dht22" src="https://github.com/user-attachments/assets/d3ca62ba-9182-493c-a95a-1ab8c3f5866c" />
+
 ##### Sensor DHT22 pinout.
 
-<img width="1260" height="504" alt="image" src="https://github.com/user-attachments/assets/fc17f73e-59f6-4ea4-9d5e-0b24323387d9" />
+<img width="575" height="213" alt="oled2" src="https://github.com/user-attachments/assets/882acfb6-e734-4784-a6bb-8b93a47490d0" />
+
 ##### Sensor ST7735S oled display pinout.
 
-
-
+## Schematics
+<img width="493" height="337" alt="arduino" src="https://github.com/user-attachments/assets/82cf334d-5a39-40c5-a373-8dc09ceaac59" />
+Rgb led two pins are connected to the pins 6 and 7.
+Push button is connected to pin 3 (workings as an interrupt).
+DHT22 sensor is connected to pin 2, 3,3V and GND.
+Oled display ST7735S connection
+- Pin RST -> pin 8.
+- Pin DC -> pin 9.
+- Pin RST -> pin 8.
+- Pin LED -> pin 3,3V or pin 5V.
+- Pin VCC -> pin 5V.
+- Pin GND -> pin GND.
+  
