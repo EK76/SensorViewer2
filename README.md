@@ -56,4 +56,8 @@ Optionally if you wan't that the Mosquitto service starts automatically then typ
 ```console
 sudo systemctl enable mosquitto
 ```
+### Example of a mtqq output with Mosquitto
+
+https://github.com/user-attachments/assets/0c2d9d58-93d2-4460-b778-8f3966cde4bf
+
 
