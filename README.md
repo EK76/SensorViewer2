@@ -1,4 +1,4 @@
-# Sensor Data Viewer.
+# Sensor DataViewer 2.
 
 The goal with this project was to display temperature and humitidy data to a oled display and transfer same data over mtqq protocol
 to an another device. It was accomplished with help of a Arduino Uno R4 Wifi board and a DHT22 sensor. It was also possible to turn off mtqq protocol transsmission
