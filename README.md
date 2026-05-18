@@ -1,8 +1,8 @@
 # Sensor DataViewer 2.
 
-The goal with this project was to display temperature and humitidy data to a oled display and transfer same data over mtqq protocol
-to an another device. It was accomplished with help of a Arduino Uno R4 Wifi board and a DHT22 sensor. It was also possible to turn off mtqq protocol transsmission
-with help of button. A rgb led lights up green color when mtqq protocol transsmission is turned on, otherwise the color is red. In my case I use the ST7735S model as my 
+The goal with this project was to display temperature and humitidy data to a oled display and transfer same data over MQTT protocol
+to an another device. It was accomplished with help of a Arduino Uno R4 Wifi board and a DHT22 sensor. It was also possible to turn off MQTT protocol transsmission
+with help of button. A rgb led lights up green color when MQTT protocol transsmission is turned on, otherwise the color is red. In my case I use the ST7735S model as my 
 oled display. The code is written in C++ programming language with the help of Arduino IDE complitator. More info about **[Arduino IDE](https://www.arduino.cc/en/software)**.
 
 Included Arduino libraries for this project.
@@ -41,10 +41,10 @@ More info about **[MQTT](https://en.wikipedia.org/wiki/MQTT)**-
 ##### Sensor ST7735S oled display pinout.
 
 ## Schematics
-<img width="493" height="337" alt="arduino" src="https://github.com/user-attachments/assets/82cf334d-5a39-40c5-a373-8dc09ceaac59" />
+<img width="493" height="337" alt="arduino" src="https://github.com/user-attachments/assets/82cf334d-5a39-40c5-a373-8dc09ceaac59" /><br />
 
-Rgb led's two pins are connected to the pins 6 and 7.
-Push button is connected to pin 3 (workings as an interrupt).
+Rgb led's two pins are connected to the pins 6 and 7.<br />
+Push button is connected to pin 3 (workings as an interrupt).<br />
 DHT22 sensor is connected to pin 2, 3,3V and GND. <br />
 #### Oled display ST7735S connection
 - Pin RST -> pin 8.
@@ -54,8 +54,8 @@ DHT22 sensor is connected to pin 2, 3,3V and GND. <br />
 - Pin VCC -> pin 5V.
 - Pin GND -> pin GND.
   
-Here is a short description how to install Mosquitto, which can be used to send mttq messages from the Arduino device to another device. In my case the device is installed with Ubuntu 25.10 operatingsystem.
-First install mosquitto-clients and optionally mosquitto if you want to use the Ubuntu device also as mtqq broker (server).
+Here is a short description how to install Mosquitto, which can be used to send MQTT messages from the Arduino device to another device. In my case the device is installed with Ubuntu 25.10 operatingsystem.
+First install mosquitto-clients and optionally mosquitto if you want to use the Ubuntu device also as MQTT broker (server).
 ```console
 sudo apt install mosquitto-clients
 sudo apt install mosquitto
@@ -68,11 +68,11 @@ Optionally if you wan't that the Mosquitto service starts automatically when dev
 ```console
 sudo systemctl enable mosquitto
 ```
-### Example of a mtqq output with Mosquitto
+### Example of a MQTT output with Mosquitto
 
 https://github.com/user-attachments/assets/43e05c0d-fe26-4879-b46f-6a964fa270de
 
-Here is sample C# code that also output mtqq messages from the Arduino device to a console window with help of the M2Mqtt plugin.
+Here is sample C# code that also output MQTT messages from the Arduino device to a console window with help of the M2Mqtt plugin.
 ```
 using System.Text;
 using uPLibrary.Networking.M2Mqtt;
@@ -83,6 +83,7 @@ client.MqttMsgPublishReceived += new MqttClient.MqttMsgPublishEventHandler(clien
 string clientId = Guid.NewGuid().ToString();
 client.Connect(clientId);
 client.Subscribe(new string[] { "Sensordata" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+# Sensordata function as MQTT topic to enable the MQTT broker to identify the appropriate publishers and subscribers for message transmission.
 
 static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
 {
