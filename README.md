@@ -14,6 +14,7 @@ Included Arduino libraries for this project.
 #include <PubSubClient.h>     # Library for the mtqq protocol.
 #include <Adafruit_ST7735.h>  # Library for the oled display.
 #include <Adafruit_GFX.h>     # Library for the oled display.
+#include <network.h>          # Info about your wireless network.
 ```
 
 ### MQTT (Message Queuing Telemetry Transport)
