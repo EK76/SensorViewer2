@@ -1,2 +1,2 @@
-#define ssid "Kotiverkko"
-#define password "QM!3475vPv!78jlp1"
+#define ssid "*************" // Your SSID name.
+#define password "***************" // Your Wifi password.
