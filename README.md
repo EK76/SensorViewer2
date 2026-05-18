@@ -20,7 +20,7 @@ Included Arduino libraries for this project.
 ### MQTT (Message Queuing Telemetry Transport)
 It is a lightweight, publish-subscribe network protocol designed for machine-to-machine (M2M) communication and the Internet of Things (IoT). It is ideal for low-bandwidth, high-latency, 
 or unreliable networks, making it the standard for connecting remote devices, sensors, and mobile applications with minimal power consumption.
-More info about **[MQTT](https://en.wikipedia.org/wiki/MQTT)**-
+More info about **[MQTT](https://en.wikipedia.org/wiki/MQTT)**.
 
 ### This project consist of
 
