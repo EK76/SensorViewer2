@@ -8,13 +8,13 @@ oled display. The code is written in C++ programming language with the help of A
 Included Arduino libraries for this project.
 
 ```
-#include <WiFiS3.h>           # Library for the wifi connection.
-#include <DHT.h>              # Library for the DHT22 Sensor.
-#include <DHT_U.h>            # Library for the DHT22 Sensor.
-#include <PubSubClient.h>     # Library for the mtqq protocol.
-#include <Adafruit_ST7735.h>  # Library for the oled display.
-#include <Adafruit_GFX.h>     # Library for the oled display.
-#include <network.h>          # Info about your wireless network.
+#include <WiFiS3.h>           // Library for the wifi connection.
+#include <DHT.h>              // Library for the DHT22 Sensor.
+#include <DHT_U.h>            // Library for the DHT22 Sensor.
+#include <PubSubClient.h>     // Library for the mtqq protocol.
+#include <Adafruit_ST7735.h>  // Library for the oled display.
+#include <Adafruit_GFX.h>     // Library for the oled display.
+#include <network.h>          // Info about your wireless network.
 ```
 
 ### MQTT (Message Queuing Telemetry Transport)
