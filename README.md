@@ -49,7 +49,7 @@ DHT22 sensor is connected to pin 2, 3,3V and GND. <br />
 #### Oled display ST7735S connection
 - Pin RST -> pin 8.
 - Pin DC ->  pin 9.
-- Pin RST -> pin 8.
+- Pin CS -> pin 10.
 - Pin LED -> pin 3,3V or pin 5V.
 - Pin VCC -> pin 5V.
 - Pin GND -> pin GND.
