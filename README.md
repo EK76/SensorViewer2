@@ -14,6 +14,7 @@ Included Arduino libraries for this project.
 #include <Adafruit_SSD1306.h>  // Library for the oled display.
 #include <Adafruit_GFX.h>     // Library for the oled display.
 #include <network.h>          // Info about your wireless network.
+#include <display.h>          // Diffrerents Led Matrix configurations.
 ```
 
 ### MQTT (Message Queuing Telemetry Transport)
