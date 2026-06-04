@@ -1,14 +1,10 @@
 #include <WiFiS3.h>
-
 #include <DHT.h>
 #include <DHT_U.h>
-
-
 #include <PubSubClient.h>
 #include <Adafruit_ST7735.h>
 #include <Adafruit_GFX.h>
 #include <SPI.h>
-
 #include "networkinfo.h"
 
 #define cs_Value 10
