@@ -1,26 +1,28 @@
 # Sensor DataViewer 2.
 
 The goal with this project was to display temperature and humitidy data to a oled display and transfer same data over MQTT protocol
-to an another device. It was accomplished with help of a Arduino Uno R4 Wifi board and a DHT22 sensor. In my case I use the Adafruit_SSD1306 model as my 
-oled display. The code is written in C++ programming language with the help of Arduino IDE complitator. More info about **[Arduino IDE](https://www.arduino.cc/en/software)**.
+to an another device. It was accomplished with help of a Arduino Uno R4 Wifi board and a DHT22 sensor. In my case I use the Adafruit SSD1306 model as my 
+oled display. The Arduino UNO R4 WiFi comes with a built in 12x8 LED Matrix, that is available to be programmed to display graphics, animations or act as an interface
+which I have used in this project. The code is written in C++ programming language with the help of Arduino IDE complitator. 
+More info about **[Arduino IDE](https://www.arduino.cc/en/software)**.
 
 Included Arduino libraries for this project.
 
 ```
-#include <WiFiS3.h>           // Library for the wifi connection.
-#include <DHT.h>              // Library for the DHT22 Sensor.
-#include <DHT_U.h>            // Library for the DHT22 Sensor.
-#include <PubSubClient.h>     // Library for the mtqq protocol.
+#include <WiFiS3.h>            // Library for the wifi connection.
+#include <DHT.h>               // Library for the DHT22 Sensor.
+#include <DHT_U.h>             // Library for the DHT22 Sensor.
+#include <PubSubClient.h>      // Library for the mtqq protocol.
 #include <Adafruit_SSD1306.h>  // Library for the oled display.
-#include <Adafruit_GFX.h>     // Library for the oled display.
-#include <network.h>          // Info about your wireless network.
-#include <display.h>          // Diffrerents Led Matrix configurations.
+#include <Adafruit_GFX.h>      // Library for the oled display.
+#include <network.h>           // Info about your wireless network.
+#include <display.h>           // Diffrerents Led Matrix configurations.
 ```
 
 ### MQTT (Message Queuing Telemetry Transport)
 It is a lightweight, publish-subscribe network protocol designed for machine-to-machine (M2M) communication and the Internet of Things (IoT). It is ideal for low-bandwidth, high-latency, 
-or unreliable networks, making it the standard for connecting remote devices, sensors, and mobile applications with minimal power consumption.
-More info about **[MQTT](https://en.wikipedia.org/wiki/MQTT)**.
+or unreliable networks, making it the standard for connecting remote devices, sensors, and mobile applications with minimal power consumption. 
+More info about **[MQTT](https://en.wikipedia.org/wiki/MQTT)**. 
 
 ### This project consist of
 
@@ -52,10 +54,11 @@ Adafruit SSD1306 oled display is connected to Arduino with help of qwiic cable.
 Qwiic connector is a standardized 4-pin JST SH connector (1 mm pitch) developed by SparkFun Electronics for rapid, solder-free hardware prototyping. 
 It allows you to quickly plug sensors, displays, and actuators directly into microcontrollers using the I2C communication protocol.
 
-### Mosquitto broker installation.
+### MQTT broker installation.
 
-Here is a short description how to install your own Mosquitto broker, which can be used to send MQTT messages from the Arduino device to another device. In my case the device is installed with Ubuntu 25.10 operatingsystem.
-First install mosquitto-clients and optionally mosquitto if you want to use the Ubuntu device also as MQTT broker (server).
+Here is a short description how to install your own broker, in this case I have chhosen Mosquitto, which can be used to send MQTT messages from the Arduino device to another device. 
+In my case the device is installed with Ubuntu 25.10 operatingsystem.
+First install mosquitto-clients and optionally mosquitto if you want to use the Ubuntu device also as MQTT broker (server). 
 ```console
 sudo apt install mosquitto-clients
 sudo apt install mosquitto
@@ -68,7 +71,7 @@ Optionally if you wan't that the Mosquitto service starts automatically when dev
 ```console
 sudo systemctl enable mosquitto
 ```
-Optionally for testing your mqtt project, can use these test brokers before you for example install your mqtt broker.
+Optionally for testing your mqtt project, can use these test brokers before you for example install your own mqtt broker.
 - test.mosquitto.org
 - broker.hivemq.com
 
